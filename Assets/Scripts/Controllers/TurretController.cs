@@ -24,11 +24,11 @@ namespace Snake_box
         {
             _hiddenInstance = this;
 
-            Data.Instance.TurretData._turretQueue.Enqueue(Data.Instance.TurretData.TurretPlant.AddLaserTurret());
-//            Data.Instance.TurretData._turretQueue.Enqueue(Data.Instance.TurretData.TurretPlant.AddPlasmaTurret());
-            Data.Instance.TurretData._turretQueue.Enqueue(Data.Instance.TurretData.TurretPlant.AddPlasmaRailTurret());
+//            Data.Instance.TurretData._turretQueue.Enqueue(Data.Instance.TurretData.TurretPlant.AddLaserTurret());
+            Data.Instance.TurretData._turretQueue.Enqueue(Data.Instance.TurretData.TurretPlant.AddPlasmaTurret());
+//            Data.Instance.TurretData._turretQueue.Enqueue(Data.Instance.TurretData.TurretPlant.AddPlasmaRailTurret());
 //            Data.Instance.TurretData._turretQueue.Enqueue(Data.Instance.TurretData.TurretPlant.AddFrostGunTurret());
-//            Data.Instance.TurretData._turretQueue.Enqueue(Data.Instance.TurretData.TurretPlant.AddShotgunTurret());
+            Data.Instance.TurretData._turretQueue.Enqueue(Data.Instance.TurretData.TurretPlant.AddShotgunTurret());
 //            Data.Instance.TurretData._turretQueue.Enqueue(Data.Instance.TurretData.TurretPlant.AddCannonTurret());
             Data.Instance.TurretData._turretQueue.Enqueue(Data.Instance.TurretData.TurretPlant.AddMachineGunTurret());
             Data.Instance.TurretData._turretQueue.Enqueue(Data.Instance.TurretData.TurretPlant.AddFrostShotgunTurret());
