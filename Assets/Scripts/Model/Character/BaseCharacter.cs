@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 
 namespace Snake_box
@@ -18,6 +19,8 @@ namespace Snake_box
         protected float _angularSpeed;
         private Direction _direction = Direction.Up;
         protected AnimationCurve _animation;
+        public GameObject ParticleOnDie;
+        public Image hpbar;
 
         #endregion
 
@@ -50,6 +53,7 @@ namespace Snake_box
         public void SetDamage(float damage)///нанесения урона без зашиты
         {
             _currentSnakeHp -= damage;
+            hpbar.fillAmount = (float) _currentSnakeHp/ (float) _baseSnakeHp ;
             if (_currentSnakeHp <= 0)
             {
                 Die();
@@ -58,6 +62,8 @@ namespace Snake_box
 
         public void Die()
         {
+            FindObjectOfType<CameraForMovie>().ReserCamera();
+            GameObject.Instantiate(ParticleOnDie,transform.position,Quaternion.identity);
             gameObject.SetActive(false);
             Services.Instance.LevelService.IsSnakeAlive = false;
             Services.Instance.LevelService.EndLevel();

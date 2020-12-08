@@ -98,4 +98,9 @@ public class CameraForMovie : MonoBehaviour
         transform.LookAt(Player.transform);
         Player.transform.position = new Vector3(-16, 0, 65);
     }
+
+    public void ReserCamera()
+    {
+        gameObject.transform.SetParent(null);
+    }
 }
